@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+body.neutral {
+  --hue: var(--hue-neutral);
+}
+
+.container {
+  width: 1000px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+#intruction h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#intruction ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+#intruction ul li {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+#question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#answer-buttons button {
+  font-size: 1.1rem;
+}
+
+#essayAnswer {
+  width: 80%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+#closing h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 0px hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  outline: none;
+  transition: all ease-in-out 0.1s;
+}
+
+.btn:hover {
+  scale: 1.01;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.btn.neutral {
+  --hue: var(--hue-neutral);
+}
+
+.start-btn,
+.next-btn,
+.essay-btn,
+.show-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}

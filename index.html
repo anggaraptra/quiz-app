@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <input type="text" id="essayAnswer" class="essayAnswer hide" value="" />
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn" onclick="sound();">Answer 1</button>
+          <button class="btn" onclick="sound();">Answer 2</button>
+          <button class="btn" onclick="sound();">Answer 3</button>
+          <button class="btn" onclick="sound();">Answer 4</button>
+          <button class="btn" onclick="sound();">Answer 5</button>
+        </div>
+      </div>
+      <div id="intruction" class="">
+        <h1>INSTRUCTIONS</h1>
+        <ul>
+          <li>1. There'll be 5 Questions and with 5 Options each</li>
+          <li>2. The Host will pick from someone who raises their hand to answer the quetions</li>
+          <li>3. If you get the answer right, you get a point. else, nobody'll get the point</li>
+          <li>4. Answers will be revealed after answering</li>
+        </ul>
+      </div>
+      <div class="controls">
+        <button id="start-btn" onclick="sound();" class="start-btn btn">Start</button>
+        <button id="show-btn" class="show-btn btn hide">Show</button>
+        <button id="next-btn" onclick="sound();" class="next-btn btn hide">Next</button>
+        <button id="essay-btn" class="essay-btn btn hide">Essay</button>
+      </div>
+    </div>
+    <div id="closing" class="hide">
+      <h1>THANKS FOR JOIN THE QUIZ</h1>
+    </div>
+    <audio src="sound/correct.mp3" id="soundCorrect"></audio>
+    <audio src="sound/wrong.mp3" id="soundWrong"></audio>
+    <audio src="sound/backsound.mp3" id="backSound"></audio>
+    <audio src="sound/closing.mp3" id="closingSound"></audio>
+  </body>
+</html>
